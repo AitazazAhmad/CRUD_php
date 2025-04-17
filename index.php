@@ -1,6 +1,5 @@
 <?php include('header.php') ?>
 <?php include('dbcon.php') ?>
-<?php include('insert_data.php') ?>
 <div class="box1">
             <h2>All Students</h2>
         <button  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD STUDENTS</button>
@@ -12,6 +11,8 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Age</th>
+                <th>Update</th>
+                <th>Delete</th>
             </tr>
             <tbody>
                 <?php 
@@ -32,6 +33,8 @@
                         <td><?php echo $row['first_name'];?></td>
                         <td><?php echo $row['last_name'];?></td>
                         <td><?php echo $row['age'];?></td>
+                        <td><a href="update_page_1.php?id=<?php echo $row['id'];?>" class="btn btn-success">Update</a></td>
+                        <td><a href="#" class="btn btn-danger">Delete</a></td>
                         </tr>
                         
                     <?php 
