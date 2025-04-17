@@ -8,6 +8,5 @@ if(!$connection)
 {
     die("connection failed");
 }
-else
-echo "Connected successfully!";
+
 ?>

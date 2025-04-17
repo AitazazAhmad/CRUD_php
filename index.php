@@ -20,22 +20,21 @@
               }
               else
               {
-                print_r($result);
-              }
+                while($row = mysqli_fetch_assoc($result))
+                {
+                    ?>
+                 <tr>
+                    <td><?php echo $row['id'];?></td>
+                    <td><?php echo $row['first_name'];?></td>
+                    <td><?php echo $row['last_name'];?></td>
+                    <td><?php echo $row['age'];?></td>
+                </tr>
 
-                ?>
-                <tr>
-                    <td>3</td>
-                    <td>lars</td>
-                    <td>paul</td>
-                    <td>25</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>paul</td>
-                    <td>harry</td>
-                    <td>26</td>
-                </tr>
+                     <?php 
+                    
+                }
+            }
+            ?>
 
             </tbody>
         </thead>
