@@ -1,8 +1,8 @@
 <?php include('header.php') ?>
 <?php include('dbcon.php') ?>
 <div class="box1">
-            <h2>All Students</h2>
-        <button  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD STUDENTS</button>
+            <h2>All Employees</h2>
+        <button  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD Employees</button>
         </div>
     <table class="table table-hover table-bordered table-striped">
         <thead>
@@ -17,7 +17,7 @@
             <tbody>
                 <?php 
                  
-               $query = "select * from students";
+               $query = "select * from employees";
                $result = mysqli_query($connection , $query);
               if(!$result)
               {
@@ -63,7 +63,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">ADD STUDENTS</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">ADD Employees</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
