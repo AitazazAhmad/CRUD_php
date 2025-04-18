@@ -5,6 +5,9 @@ if(isset($_POST['add_students']))
     $f_name = $_POST['f_name'];
     $l_name = $_POST['l_name'];
     $age = $_POST['age'];
+    $u_name = $_POST['u_name'];
+    $pass = $_POST['pass'];
+    $role = $_POST['role'];
 
     if($f_name == "" || empty($f_name))
     {
@@ -12,7 +15,7 @@ if(isset($_POST['add_students']))
     }
     else
     {
-        $query = "insert into `students` (`first_name` , `last_name` , `age`) values ('$f_name' , '$l_name' , '$age')";
+        $query = "insert into `employees` (`first_name` , `last_name` , `age` , `user_name` , `password` , `role`) values ('$f_name' , '$l_name' , '$age' , '$u_name' , '$pass' , '$role')";
         $result = mysqli_query($connection,$query);
         if(!$result)
         {

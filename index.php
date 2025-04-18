@@ -11,6 +11,9 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Age</th>
+                <th>User Name</th>
+                <th>Password</th>
+                <th>Role</th>
                 <th>Update</th>
                 <th>Delete</th>
             </tr>
@@ -33,6 +36,9 @@
                         <td><?php echo $row['first_name'];?></td>
                         <td><?php echo $row['last_name'];?></td>
                         <td><?php echo $row['age'];?></td>
+                        <td><?php echo $row['user_name'];?></td>
+                        <td><?php echo $row['password'];?></td>
+                        <td><?php echo $row['role'];?></td>
                         <td><a href="update_page_1.php?id=<?php echo $row['id'];?>" class="btn btn-success">Update</a></td>
                         <td><a href="#" class="btn btn-danger">Delete</a></td>
                         </tr>
@@ -79,6 +85,18 @@
         <div class="form-group">
           <label for="f_name">Age</label>
           <input type="text" name="age" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="u_name">User Name</label>
+          <input type="text" name="u_name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="pass">Password</label>
+          <input type="number" name="pass" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="role">Role</label>
+          <input type="text" name="role" class="form-control">
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
